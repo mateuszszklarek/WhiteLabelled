@@ -197,7 +197,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "function move {\n    SBROOT=\"$CONFIGURATION_BUILD_DIR/$CONTENTS_FOLDER_PATH\"\n    # Storyboards are compiled directories after compilation (storyboardc)\n    SBDEST=\"$SBROOT/Base.lproj/LaunchScreen.storyboardc\"\n    SBSRC=\"$SBROOT/Flavour$1_LaunchScreen.storyboardc\"\n    if [ -d \"$SBSRC\" ]; then\n        rm -R \"$SBDEST\"\n        mv \"$SBSRC\" \"$SBDEST\"\n    fi\n}\n\nmove A\nmove B\n";
+			shellScript = "function move {\n    SBROOT=\"$CONFIGURATION_BUILD_DIR/$CONTENTS_FOLDER_PATH\"\n    # Storyboards are compiled directories after compilation (storyboardc)\n    SBDEST=\"$SBROOT/Base.lproj/LaunchScreen.storyboard\"\n    SBSRC=\"$SBROOT/Flavour$1_LaunchScreen.storyboard\"\n    if [ -d \"$SBSRC\" ]; then\n        rm -R \"$SBDEST\"\n        mv \"$SBSRC\" \"$SBDEST\"\n    fi\n}\n\nmove A\nmove B\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
